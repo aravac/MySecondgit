@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BankHome.master.cs" Inherits="BankHome" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body background="../images/bankimages.jpg">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <div id= "Main_Div"align="center" >
+            
+            <table >
+                <tr>
+                    <td> 
+                        <asp:Image ID="Image1" runat="server" 
+                            ImageUrl="~/images/Internet banking 02 .jpg" Width="999px" Height="197px" />
+                     </tr>
+                     <tr>
+                        <td>
+                            <asp:Menu ID="Menu1" runat="server" Font-Bold="True" Height="21px" 
+                                Orientation="Horizontal" Width="100%">
+                                <Items>
+                                    <asp:MenuItem Text="Loan Sanction" Value="Loan Sanction" 
+                                        NavigateUrl="~/Admin/LoanSanction.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Account Holder Details" Value="Account Holder Details" 
+                                        NavigateUrl="~/Admin/AccountDeatils.aspx">
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/BankLogin.aspx"></asp:MenuItem>
+                                </Items>
+                            </asp:Menu>
+                        </td>
+                     </tr>
+                        <tr>
+                        <td>   
+   <div>        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>             </td>
+                </tr>
+            </table>
+        </div>     
+    </form>
+</body>
+</html>
